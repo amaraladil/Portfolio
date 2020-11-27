@@ -11,7 +11,7 @@ var app = express();
 
 //Set up mongoose connection
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb+srv://amar:amar@amaraladil-portfolio.korlj.mongodb.net/projects?retryWrites=true&w=majority';
+var mongoDB = 'mongodb+srv://amar:pass@amaraladil-portfolio.korlj.mongodb.net/projects?retryWrites=true&w=majority';
 // connect to the database using the provided URI string.
 mongoose.connect(mongoDB);
 
