@@ -9,7 +9,7 @@ block content
             //-Mixin looper: it loops through projects array from routes/index.js
             mixin project-setup(project) 
               .col-md-3.col-sm-6.col-padding.text-center.animate-box
-                a.work.image-popup(href='#', style='background-image: url(/images/'+ (project.image == '' ? 'img-1.jpg' | project.image ) + ');')
+                a.work.image-popup(href='#', style='background-image: url(/images/'+ (project.image == '' ? 'img-1.jpg' : project.image ) + ');')
                   .desc
                     h3= project.name
                     span= project.description
