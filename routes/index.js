@@ -32,31 +32,46 @@ router.get('/project', function(req, res, next) {
 	{
 		name: "King William Hotel",
 		description: "Small website project with Ruby on Rails and is designed to book appointments for customers.",
-		date: "December 2017"
+		date: "December 2017",
+		source: "RubyOnRails",
+		Link: "N/A",
+		image: ""
 	},
 	{
 		name: "Theater Project",
 		description: "Visual Basic Project that displays a theater room where users can book seats and show reports for each theater schedule.",
-		date: "April 2016"
+		date: "April 2016",
+		source: "RubyOnRails",
+		Link: "N/A",
+		image: ""
 	},
 	{
 		name: "Realtor Website",
 		description: "A web development class group project that is design for realtors.",
-		date: "December 2016"
+		date: "December 2016",
+		source: "PHP, Postgre SQL",
+		Link: "N/A",
+		image: "realtor.PNG"
 	},
 	{
 		name: "Durak Game",
 		description: "Used C# to design and program the game to functionally working.",
-		date: "April 2017"
+		date: "April 2017",
+		source: "C#, Visual Studio",
+		Link: "N/A",
+		image: ""
 	},
 	{
 		name: "Cobol Transactions Paper",
 		description: "A mainframe program that seperates each transaction records to specific webpages.",
-		date: "April 2017"
+		date: "April 2017",
+		source: "COBOL",
+		Link: "N/A",
+		image: ""
 	}
 	];
 
-  res.render('projects', { title: "Amar's Hidden Project", projects });
+  res.render('projects', { title: "Amar's Hidden Project", projects, activePortfolio: true });
 });
 
 router.post('/project', projects_controller.insertProject);

@@ -6,21 +6,24 @@ block content
           h2.fh5co-heading.animate-box(data-animate-effect='fadeInLeft') Projects
           h4.fh5co-heading.animate-box(data-animate-effect='fadeInLeft')=message ? message : ''
           .row.row-bottom-padded-md
-            mixin project-setup(projects)
+            //-Mixin looper: it loops through projects array from routes/index.js
+            mixin project-setup(project) 
               .col-md-3.col-sm-6.col-padding.text-center.animate-box
-                a.work.image-popup(href='#', style='background-image: url(/images/img-1.jpg);')
+                a.work.image-popup(href='#', style='background-image: url(/images/'+ (project.image == '' ? 'img-1.jpg' | project.image ) + ');')
                   .desc
-                    h3= projects.name
-                    span= projects.description
-                    span= projects.date
+                    h3= project.name
+                    span= project.description
+                    span= project.date
+                    span= "Code" project.source
+                    span= project.link
             for project in projects
               +project-setup(project)
-        .fh5co-narrow-content.animate-box(data-animate-effect='fadeInLeft')
+        //- .fh5co-narrow-content.animate-box(data-animate-effect='fadeInLeft')
           .row
             .col-md-4
               h2 Get In Touch
               
-            //- form(action='/project', method='post')
+            form(action='/project', method='post')
               .row
                 .col-md-12
                   .row
