@@ -27,6 +27,7 @@ router.get('/about', function(req, res, next) {
 });
 
 router.get('/project', function(req, res, next) {
+	//JSON List of projects that'll loop through in webpage
 	var projects = [
 	{
 		name: "King William Hotel",
