@@ -14,7 +14,7 @@ block content
                     h3= project.name
                     span= project.description
                     span= project.date
-                    span= "Code" project.source
+                    span= 'Code: ', project.source
                     span= project.link
             for project in projects
               +project-setup(project)
