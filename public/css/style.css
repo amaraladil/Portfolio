@@ -602,12 +602,12 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   .work .desc span {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    background-color: #4c4b4b;
+    background-color: #696969;
     width: 90%;
     margin: auto;
     opacity: 0.85;
   }
-  .work .desc:last-child{
+  .work .desc span:last-child{
     border-radius: 0 0 25px 25px;
   }
 }
