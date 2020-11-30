@@ -202,7 +202,7 @@ figure {
 	}
 	@media screen and (max-width: $screen-sm) {
 		width: 270px;
-		@include translateX(-270px);
+		@include translateX(-270px); 
 	}
 	#fh5co-logo {
 		text-align: center;
