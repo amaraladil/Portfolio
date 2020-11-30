@@ -194,6 +194,7 @@ figure {
 	left: 0;	
 	overflow-y: hidden;
 	z-index: 1001;
+	background-color: #80808026;
 	@include transition(.5s);
 	@media screen and (max-width: $screen-lg) {
 		width: 30%;
@@ -664,7 +665,7 @@ body {
 	}
 	&:hover{
 		.desc{
-			opacity: 1;
+			opacity: 0.9;
 			h3{
 				-webkit-transform: translate3d(0, 0, 0);
 				transform: translate3d(0, 0, 0);
@@ -1042,7 +1043,7 @@ body {
 }
 
 
-// Burger Menu
+// the mobile close/open nav bar
 .fh5co-nav-toggle {
   cursor: pointer;
   text-decoration: none;
