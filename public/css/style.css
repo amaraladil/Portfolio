@@ -606,6 +606,8 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
     width: 90%;
     margin: auto;
     opacity: 0.85;
+    color: white;
+    font-size: 13px;
   }
   .work .desc span:last-child{
     border-radius: 0 0 25px 25px;
