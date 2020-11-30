@@ -192,7 +192,7 @@ figure {
 	bottom: 0;
 	top: 0;
 	left: 0;	
-	overflow-y: scroll;
+	overflow-y: hidden;
 	z-index: 1001;
 	@include transition(.5s);
 	@media screen and (max-width: $screen-lg) {
