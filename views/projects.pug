@@ -14,7 +14,7 @@ block content
                     h3= project.name
                     span= project.description
                     span= project.date
-                    span= 'Programmed in: ', project.tech
+                    span= 'Programmed in: ' + project.tech
             for project in projects
               +project-setup(project)
         //- .fh5co-narrow-content.animate-box(data-animate-effect='fadeInLeft')
