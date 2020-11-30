@@ -39,9 +39,9 @@ router.get('/project', function(req, res, next) {
 	},
 	{
 		name: "Theater Project",
-		description: "Visual Basic Project that displays a theater room where users can book seats and show reports for each theater schedule.",
+		description: "Visual Basic Project that displays a theater room, where users can book seats, and show reports for each theater schedule.",
 		date: "April 2016",
-		source: "RubyOnRails",
+		source: "VB, MS SQL, Visual Studio",
 		link: "#",
 		image: ""
 	},
@@ -73,9 +73,9 @@ router.get('/project', function(req, res, next) {
 		name: "Portfolio",
 		description: "The current website - used Node, Express and Pug to create this website with mongoDB and mail service",
 		date: "July 2019",
-		source: "Node, MongoDB, ",
+		source: "Node, MongoDB, Pug",
 		link: "/",
-		image: ""
+		image: "PortfolioPage.PNG"
 	}
 	];
 
