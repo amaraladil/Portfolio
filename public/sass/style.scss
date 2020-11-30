@@ -193,6 +193,7 @@ figure {
 	top: 0;
 	left: 0;	
 	overflow-y: hidden;
+	scrollbar-width: none; /* Firefox 64 */
 	z-index: 1001;
 	background-color: #54737981;
 	@include transition(.5s);
