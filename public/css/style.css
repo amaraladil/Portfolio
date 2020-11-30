@@ -1181,4 +1181,8 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   opacity: 0;
 }
 
+.img-responsive {
+  max-height: 500px;
+}
+
 /*# sourceMappingURL=style.css.map */
