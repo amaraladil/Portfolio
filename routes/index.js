@@ -31,7 +31,7 @@ router.get('/project', function(req, res, next) {
 	var projects = [
 	{
 		name: "King William Hotel",
-		description: "Small website project with Ruby on Rails and is designed to book appointments for customers.",
+		description: "Small website project with Ruby on Rails and is designed to book appointments for customers. It displays the full invoice of the hotel services to both the customer and staff of the hotel.",
 		date: "December 2017",
 		tech: "RubyOnRails",
 		link: "https://github.com/amaraladil/KWH_RubyOnRails",
@@ -39,7 +39,7 @@ router.get('/project', function(req, res, next) {
 	},
 	{
 		name: "Theater Project",
-		description: "Visual Basic Project that displays a theater room, where users can book seats, and show reports for each theater schedule.",
+		description: "A theater bookings system, where it allows owner to book movie and time for users. It displays statistics that may help the owner see what is the revenue and profit times.",
 		date: "April 2016",
 		tech: "VB, MS SQL, Visual Studio",
 		link: "https://github.com/amaraladil/TheaterProject",
@@ -47,7 +47,7 @@ router.get('/project', function(req, res, next) {
 	},
 	{
 		name: "Realtor Website",
-		description: "A web development class group project that is designed for realtors. Was the project planner/lead, focused on the backend ",
+		description: "A web development class group project that is designed for realtors. I was the project planner/lead, focused on the backend. The difficulty I had most on this was the search process for all the houses",
 		date: "December 2016",
 		tech: "PHP, Postgre SQL",
 		link: "https://github.com/amaraladil/Realtor-Website",
@@ -55,7 +55,7 @@ router.get('/project', function(req, res, next) {
 	},
 	{
 		name: "Durak Game",
-		description: "Used C# to design and program the game to functionally working.",
+		description: "Used C# to design and program the game to functionally working. Is a game against an AI that plays Durak with the player.",
 		date: "April 2017",
 		tech: "C#, Visual Studio",
 		link: "https://github.com/amaraladil/DurakGame",
@@ -87,7 +87,7 @@ router.get('/project', function(req, res, next) {
 	},
 	{
 		name: "Black Jack Game",
-		description: "This is a full black jack game against an AI opponent, with different card levels",
+		description: "This is a full black jack game against an AI opponent, with variety of options for the user to use.",
 		date: "December 2018",
 		tech: "C++",
 		link: "https://github.com/amaraladil/Black-Jack-Game",
@@ -95,7 +95,7 @@ router.get('/project', function(req, res, next) {
 	}
 	];
 
-  res.render('projects', { title: "Amar's Hidden Project", projects, activePortfolio: true });
+  res.render('projects', { title: "Amar's Projects", projects, activePortfolio: true });
 });
 
 router.post('/project', projects_controller.insertProject);

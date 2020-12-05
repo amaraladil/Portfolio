@@ -573,6 +573,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   transition: transform 0.3s, opacity 0.3s;
   -webkit-transform: translate3d(0, -15px, 0);
   transform: translate3d(0, -15px, 0);
+  margin-bottom: 0.5em;
 }
 .work .desc span {
   display: block;
@@ -582,6 +583,10 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   transition: transform 0.3s, opacity 0.3s;
   -webkit-transform: translate3d(0, 15px, 0);
   transform: translate3d(0, 15px, 0);
+  font-weight: bold;
+}
+.work .desc span:last-of-type {
+  margin-top: 1.5em;
 }
 @media screen and (max-width: 768px) {
   .work .desc {
@@ -611,10 +616,11 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   }
   .work .desc span:last-child{
     border-radius: 0 0 25px 25px;
+    margin-top: 0px;
   }
 }
 .work:hover .desc {
-  opacity: 0.9;
+  opacity: 1;
 }
 .work:hover .desc h3 {
   -webkit-transform: translate3d(0, 0, 0);
@@ -847,7 +853,8 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 
 .fh5co-heading {
   font-size: 18px;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+  margin-top: 1em;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -899,6 +906,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   background: #228896;
   color: #fff;
   border: 2px solid #228896;
+  border-radius: 2em;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background: #279bab !important;

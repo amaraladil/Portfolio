@@ -7,7 +7,7 @@ var ProjectsSchema = new Schema({
     date: {type: String, required: true}
 });
 
-// Virtual for book's URL
+// Virtual for projects's URL
 ProjectsSchema
     .virtual('url')
     .get(function () {
