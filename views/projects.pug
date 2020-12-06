@@ -9,12 +9,40 @@ block content
             //-Mixin looper: it loops through projects array from routes/index.js
             mixin project-setup(project) 
               .col-md-3.col-sm-6.col-padding.text-center.animate-box
-                a.work.image-popup(href=project.link, style='background-image: url(/images/'+ (project.image == '' ? 'img-1.jpg' : project.image ) + ');')
+                a.work.image-popup(href='', data-toggle='modal', data-target='#'+project.id , style='background-image: url(/images/'+ (project.image == '' ? 'img-1.jpg' : project.image ) + ');')
                   .desc
                     h3= project.name
-                    span= project.description
+                    //- span= project.description
                     span= project.date
                     span= project.tech
+              .modal.fade(id=project.id,tabindex="-1", role="dialog", aria-labelledby="exampleModalCenterTitle", aria-hidden="true")
+                .modal-dialog.modal-lg
+                  .modal-content(role='document')
+                    .modal-header
+                      //- h5.modal-title(id="exampleModalLongTitle") Project Title
+                      button.close(data-dismiss="modal", aria-label="Close")
+                        span(aria-hidden="true") &times;
+                    .modal-body
+                      .row.row-bottom-padded-md
+                        .col-md-6
+                          a.work.image-popup(style='background-image: url(/images/'+ (project.image == '' ? 'img-1.jpg' : project.image ) + ');')
+                          //- img.img-responsive(src='/images/20180217_144717.jpg', alt='About Me Face')
+                        .col-md-6
+                          h2.fh5co-heading= project.name
+                          p=project.description 
+                          p= 'Created in: ' + project.date
+                          if project.code
+                            p= 'Technologies used:'
+                              for code in project.code
+                                i.modal-icon(class=code.name)
+                    .modal-footer
+                      if project.web
+                        a.btn(href=project.web, title='Live Demo')
+                          i.icon-monitor
+                          | Live Demo
+                      a.btn(href=project.link, title='Source Code')
+                        i.icon-eye-outline
+                        | Source
             for project in projects
               +project-setup(project)
         //- .fh5co-narrow-content.animate-box(data-animate-effect='fadeInLeft')

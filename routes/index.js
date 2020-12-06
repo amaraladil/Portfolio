@@ -30,38 +30,76 @@ router.get('/project', function(req, res, next) {
 	//JSON List of projects that'll loop through in webpage
 	var projects = [
 	{
+		id: "kwh",
 		name: "King William Hotel",
 		description: "Small website project with Ruby on Rails and is designed to book appointments for customers. It displays the full invoice of the hotel services to both the customer and staff of the hotel.",
 		date: "December 2017",
 		tech: "RubyOnRails",
 		link: "https://github.com/amaraladil/KWH_RubyOnRails",
-		image: ""
+		image: "",
+		code: [
+			{
+				name: 'icon-ruby'
+			},
+			{
+				name: 'icon-rails'
+			}
+		]
 	},
 	{
+		id: "theater",
 		name: "Theater Project",
 		description: "A theater bookings system, where it allows owner to book movie and time for users. It displays statistics that may help the owner see what is the revenue and profit times.",
 		date: "April 2016",
 		tech: "VB, MS SQL, Visual Studio",
 		link: "https://github.com/amaraladil/TheaterProject",
-		image: "theaterVB.PNG"
+		image: "theaterVB.PNG",
+		code: [
+			{
+				name: 'icon-dot-net'
+			},
+			{
+				name: 'icon-visualstudio'
+			}
+		]
 	},
 	{
+		id: "realtor",
 		name: "Realtor Website",
 		description: "A web development class group project that is designed for realtors. I was the project planner/lead, focused on the backend. The difficulty I had most on this was the search process for all the houses",
 		date: "December 2016",
 		tech: "PHP, Postgre SQL",
 		link: "https://github.com/amaraladil/Realtor-Website",
-		image: "realtor.PNG"
+		image: "realtor.PNG",
+		web: 'realtorwebsite-project.herokuapp.com/',
+		code: [
+			{
+				name: 'icon-php'
+			},
+			{
+				name: 'icon-postgresql'
+			}
+		]
 	},
 	{
+		id: "durak",
 		name: "Durak Game",
 		description: "Used C# to design and program the game to functionally working. Is a game against an AI that plays Durak with the player.",
 		date: "April 2017",
 		tech: "C#, Visual Studio",
 		link: "https://github.com/amaraladil/DurakGame",
-		image: "Durak.PNG"
+		image: "Durak.PNG",
+		code: [
+			{
+				name: 'icon-csharp'
+			},
+			{
+				name: 'icon-postgresql'
+			}
+		]
 	},
 	{
+		id: "cobol",
 		name: "Cobol Transactions Paper",
 		description: "A mainframe program that seperates each transaction records to specific webpages.",
 		date: "April 2017",
@@ -70,28 +108,61 @@ router.get('/project', function(req, res, next) {
 		image: ""
 	},
 	{
+		id: "portfolio",
 		name: "Portfolio",
 		description: "The current website - used Node, Express and Pug to create this website with mongoDB and mail service",
 		date: "July 2019",
 		tech: "Node, MongoDB, Pug",
 		link: "https://github.com/amaraladil/Portfolio",
-		image: "PortfolioPage.PNG"
+		image: "PortfolioPage.PNG",
+		code: [
+			{
+				name: 'icon-javascript'
+			},
+			{
+				name: 'icon-node-dot-js'
+			},
+			{
+				name: 'icon-mongodb'
+			},
+			{
+				name: 'icon-bootstrap'
+			}
+		]
 	},
 	{
+		id: "unity",
 		name: "Unity Project",
 		description: "Made 3D and 2D projects for school, just getting the feel around animating and designing levels through each projects.",
 		date: "March 2020",
 		tech: "C#, Unity",
 		link: "https://github.com/amaraladil/InteractiveProjects",
-		image: ""
+		image: "",
+		code: [
+			{
+				name: 'icon-csharp'
+			},
+			{
+				name: 'icon-unity'
+			},
+			{
+				name: 'icon-visualstudio'
+			}
+		]
 	},
 	{
+		id: "blackjack",
 		name: "Black Jack Game",
 		description: "This is a full black jack game against an AI opponent, with variety of options for the user to use.",
 		date: "December 2018",
 		tech: "C++",
 		link: "https://github.com/amaraladil/Black-Jack-Game",
-		image: ""
+		image: "",
+		code: [
+			{
+				name: 'icon-cplusplus'
+			}
+		]
 	}
 	];
 

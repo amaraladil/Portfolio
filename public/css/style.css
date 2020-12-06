@@ -1,7 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon/icomoon.eot?srf3rx");
-  src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
+  src: url("../fonts/icomoon/icomoon.eot?jzgull");
+  src: url("../fonts/icomoon/icomoon.eot?jzgull#iefix") format("embedded-opentype"), 
+    url("../fonts/icomoon/icomoon.ttf?jzgull") format("truetype"), 
+    url("../fonts/icomoon/icomoon.woff?jzgull") format("woff"), 
+    url("../fonts/icomoon/icomoon.svg?jzgull#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -1144,6 +1147,9 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   .fh5co-nav-toggle {
     opacity: 0.9;
     visibility: visible;
+    border-radius: 0em 4em 2em 4em;
+    border:5px solid rgba(175, 71, 71, 0.658);  
+    border-left: none;
   }
 }
 
@@ -1193,4 +1199,14 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   max-height: 500px;
 }
 
+.modal-content {
+  background-color: #ffffffee;
+}
+
+i.modal-icon {
+  display: table-cell;
+  /* height: 32px; */
+  font-size: 24px;
+  padding: 10px;
+}
 /*# sourceMappingURL=style.css.map */
