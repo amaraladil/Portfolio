@@ -19,12 +19,29 @@ block content
                 .modal-dialog.modal-lg
                   .modal-content(role='document')
                     .modal-header
-                      //- h5.modal-title(id="exampleModalLongTitle") Project Title
                       button.close(data-dismiss="modal", aria-label="Close")
                         span(aria-hidden="true") &times;
                     .modal-body
                       .row.row-bottom-padded-md
                         .col-md-6
+                          //- .carousel.slide(id='carouselExampleIndicators',data-ride='carousel')
+                            //- ol.carousel-indicators
+                              li(data-target="#carouselExampleIndicators", data-slide-to="0", class="active")
+                              li(data-target="#carouselExampleIndicators", data-slide-to="1")
+                              li(data-target="#carouselExampleIndicators", data-slide-to="2")
+                            //- .carousel-inner
+                              .carousel-item.active
+                                img.d-block.w-100(src="/images/img-1.jpg", alt='First Slide')
+                              .carousel-item
+                                img.d-block.w-100(src="/images/img-2.jpg", alt='Second Slide')
+                              .carousel-item
+                                img.d-block.w-100(src="/images/img-3.jpg", alt='Third Slide')
+                            //- a.carousel-control-prev(href="#carouselExampleIndicators", role="button", data-slide="prev")
+                              span.carousel-control-prev-icon(aria-hidden="true")
+                              span.sr-only Previous
+                            //- a.carousel-control-next(href="#carouselExampleIndicators", role="button", data-slide="next")
+                              span.carousel-control-next-icon(aria-hidden="true")
+                              span.sr-only Next
                           a.work.image-popup(style='background-image: url(/images/'+ (project.image == '' ? 'img-1.jpg' : project.image ) + ');')
                           //- img.img-responsive(src='/images/20180217_144717.jpg', alt='About Me Face')
                         .col-md-6

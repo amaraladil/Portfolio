@@ -1133,7 +1133,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   position: fixed;
   left: 0;
   top: 0px;
-  z-index: 9999;
+  z-index: 1;
   cursor: pointer;
   opacity: 1;
   visibility: hidden;
@@ -1147,9 +1147,10 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   .fh5co-nav-toggle {
     opacity: 0.9;
     visibility: visible;
-    border-radius: 0em 4em 2em 4em;
+    border-radius: 0em 1em 2em 1em;
     border:5px solid rgba(175, 71, 71, 0.658);  
     border-left: none;
+    border-top: none;
   }
 }
 
@@ -1209,4 +1210,8 @@ i.modal-icon {
   font-size: 24px;
   padding: 10px;
 }
+
+/* .modal {
+  z-index: 10;
+} */
 /*# sourceMappingURL=style.css.map */

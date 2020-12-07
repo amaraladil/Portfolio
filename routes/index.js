@@ -32,11 +32,11 @@ router.get('/project', function(req, res, next) {
 	{
 		id: "kwh",
 		name: "King William Hotel",
-		description: "Small website project with Ruby on Rails and is designed to book appointments for customers. It displays the full invoice of the hotel services to both the customer and staff of the hotel.",
+		description: "Small group website project with Ruby on Rails, it was designed to book appointments for customers, display the full invoice of the hotel services to both the customer and staff of the hotel, and have customer pay for these invoices. This was the first time using rails and ruby, so the main challenge is to get used to integrating both the site and database appropriately.",
 		date: "December 2017",
 		tech: "RubyOnRails",
 		link: "https://github.com/amaraladil/KWH_RubyOnRails",
-		image: "",
+		image: "hotel.jpg",
 		code: [
 			{
 				name: 'icon-ruby'
@@ -66,7 +66,7 @@ router.get('/project', function(req, res, next) {
 	{
 		id: "realtor",
 		name: "Realtor Website",
-		description: "A web development class group project that is designed for realtors. I was the project planner/lead, focused on the backend. The difficulty I had most on this was the search process for all the houses",
+		description: "A web development class group project that is designed to handle online real estate for both buyer and seller. The system is able to edit the account and show all the available housing in the market, in the specified city locations or different variety of criterias. I was the project planner/lead, focused on the backend. The difficulty I had most on this was the search process for all the houses",
 		date: "December 2016",
 		tech: "PHP, Postgre SQL",
 		link: "https://github.com/amaraladil/Realtor-Website",
@@ -84,7 +84,7 @@ router.get('/project', function(req, res, next) {
 	{
 		id: "durak",
 		name: "Durak Game",
-		description: "Used C# to design and program the game to functionally working. Is a game against an AI that plays Durak with the player.",
+		description: "Used C# to design a russian card game, called Durak. You play against an AI player, each player take turns to up the previous card value. It has a full GUI design for the Player to be able to play the game. There is different choices for the Player, as the number of decks allowed in the game. As the game starts, it will choose which suit is highly valued. If clubs gets chosen, it has five more points added on top of its value. The window can show a statistic of the player's record, from how many wins to which number of cards was started.",
 		date: "April 2017",
 		tech: "C#, Visual Studio",
 		link: "https://github.com/amaraladil/DurakGame",
@@ -153,16 +153,17 @@ router.get('/project', function(req, res, next) {
 	{
 		id: "blackjack",
 		name: "Black Jack Game",
-		description: "This is a full black jack game against an AI opponent, with variety of options for the user to use.",
+		description: "Terminal-based game, where the player can play a game of black jack with a dealer and up to four AI players. The player can choose to hit or stay during the round, giving them options - plus each round they can choose how many chips they can bet each time.",
 		date: "December 2018",
 		tech: "C++",
 		link: "https://github.com/amaraladil/Black-Jack-Game",
-		image: "",
+		image: "blackjack.PNG",
 		code: [
 			{
 				name: 'icon-cplusplus'
 			}
-		]
+		],
+		web: 'https://onlinegdb.com/H1nBmxiiP'
 	}
 	];
 
