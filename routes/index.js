@@ -71,7 +71,7 @@ router.get('/project', function(req, res, next) {
 		tech: "PHP, Postgre SQL",
 		link: "https://github.com/amaraladil/Realtor-Website",
 		image: "realtor.PNG",
-		web: 'realtorwebsite-project.herokuapp.com/',
+		web: 'https://realtorwebsite-project.herokuapp.com/',
 		code: [
 			{
 				name: 'icon-php'

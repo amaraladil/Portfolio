@@ -1252,6 +1252,7 @@ i.modal-icon {
   height: 100px;
   width: 250px;
 }
+
 @-webkit-keyframes scroll {
   0% {
     -webkit-transform: translateX(0);
@@ -1272,7 +1273,11 @@ i.modal-icon {
     -webkit-transform: translateX(calc(-150px * 7));
             transform: translateX(calc(-150px * 7));
   }
-} */
+}
+
+.slide i {
+  font-size: 100px;
+}
 
 /* .modal {
   z-index: 10;
