@@ -337,14 +337,14 @@ figure figcaption {
 #fh5co-hero .flexslider .flex-control-nav li a {
   background: rgba(255, 255, 255, 0.2);
   box-shadow: none;
-  width: 12px;
-  height: 12px;
+  width: 15px;
+  height: 15px;
   cursor: pointer;
 }
 #fh5co-hero .flexslider .flex-control-nav li a.flex-active {
   cursor: pointer;
   background: transparent;
-  border: 2px solid #228896;
+  border: 3px solid #228896;
 }
 #fh5co-hero .flexslider .flex-direction-nav {
   display: none;
@@ -379,11 +379,11 @@ figure figcaption {
   font-weight: 100;
   font-family: "Roboto", Arial, sans-serif;
 }
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   #fh5co-hero .flexslider .slider-text > .slider-text-inner h1 {
     font-size: 28px;
   }
-}
+} */
 #fh5co-hero .flexslider .slider-text > .slider-text-inner h2 {
   font-size: 18px;
   line-height: 1.5;
@@ -1211,7 +1211,24 @@ i.modal-icon {
   padding: 10px;
 }
 
-/* // Styling */
+/* // Styling for carasel */
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-150px * 7));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-150px * 7));
+  }
+}
 .slider {
   background: white;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
@@ -1221,9 +1238,7 @@ i.modal-icon {
   position: relative;
   width: 90%;
 }
-
 .slider::before, .slider::after {
-  background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
   content: "";
   height: 100px;
@@ -1234,45 +1249,21 @@ i.modal-icon {
 .slider::after {
   right: 0;
   top: 0;
-  -webkit-transform: rotateZ(180deg);
-          transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
 }
 .slider::before {
   left: 0;
   top: 0;
 }
 .slider .slide-track {
-  -webkit-animation: scroll 40s linear infinite;
-          animation: scroll 40s linear infinite;
-  display: -webkit-box;
+  -webkit-animation: scroll 20s linear infinite;
+          animation: scroll 20s linear infinite;
   display: flex;
   width: calc(150px * 14);
 }
 .slider .slide {
   height: 100px;
   width: 250px;
-}
-
-@-webkit-keyframes scroll {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(calc(-150px * 7));
-            transform: translateX(calc(-150px * 7));
-  }
-}
-
-@keyframes scroll {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(calc(-150px * 7));
-            transform: translateX(calc(-150px * 7));
-  }
 }
 
 .slide i {

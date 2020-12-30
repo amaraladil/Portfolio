@@ -21,29 +21,39 @@ block content
                     .modal-header
                       button.close(data-dismiss="modal", aria-label="Close")
                         span(aria-hidden="true") &times;
+                    - var carouselName = project.id + "Indicator"
+                    if project.extraImage
+                      - var images = [project.image].concat(project.extraImage)
+                    else
+                      - var images = [project.image]
                     .modal-body
                       .row.row-bottom-padded-md
                         .col-md-6
-                          //- .carousel.slide(id='carouselExampleIndicators',data-ride='carousel')
+                          //- | #{images.length}
+                          .carousel.slide(id=carouselName, data-ride='carousel', style="align-content: center;", data-interval="false")
                             //- ol.carousel-indicators
-                              li(data-target="#carouselExampleIndicators", data-slide-to="0", class="active")
-                              li(data-target="#carouselExampleIndicators", data-slide-to="1")
-                              li(data-target="#carouselExampleIndicators", data-slide-to="2")
-                            //- .carousel-inner
-                              .carousel-item.active
-                                img.d-block.w-100(src="/images/img-1.jpg", alt='First Slide')
-                              .carousel-item
-                                img.d-block.w-100(src="/images/img-2.jpg", alt='Second Slide')
-                              .carousel-item
-                                img.d-block.w-100(src="/images/img-3.jpg", alt='Third Slide')
-                            //- a.carousel-control-prev(href="#carouselExampleIndicators", role="button", data-slide="prev")
-                              span.carousel-control-prev-icon(aria-hidden="true")
-                              span.sr-only Previous
-                            //- a.carousel-control-next(href="#carouselExampleIndicators", role="button", data-slide="next")
-                              span.carousel-control-next-icon(aria-hidden="true")
-                              span.sr-only Next
-                          a.work.image-popup(style='background-image: url(/images/'+ (project.image == '' ? 'img-1.jpg' : project.image ) + ');')
-                          //- img.img-responsive(src='/images/20180217_144717.jpg', alt='About Me Face')
+                              each val, index in images
+                                if index == 0 
+                                  li(data-target="#"+carouselName, data-slide-to=index, class="active")
+                                else
+                                  li(data-target="#"+carouselName, data-slide-to=index)
+                            .carousel-inner
+                              each val, index in images
+                                if index == 0 
+                                  .item.active
+                                    a.work(style='background-image: url(/images/'+ (val == '' ? 'img-1.jpg' : val ) + ');')
+                                else if index > 0 && val
+                                  .item
+                                    a.work(style='background-image: url(/images/'+ (val == '' ? 'img-1.jpg' : val ) + ');')
+
+                            if images.length > 1
+                              a.left.carousel-control(href="#"+carouselName, data-slide="prev")
+                                i.icon-chevron-left(style="font-size: 50px;")
+                                span.sr-only Previous
+                              a.right.carousel-control(href="#"+carouselName, data-slide="next")
+                                i.icon-chevron-right(style="font-size: 50px;")
+                                span.sr-only Next
+                          //- a.work.image-popup(style='background-image: url(/images/'+ (project.image == '' ? 'img-1.jpg' : project.image ) + ');')
                         .col-md-6
                           h2.fh5co-heading= project.name
                           p=project.description 
@@ -81,6 +91,18 @@ block content
                         textarea#message.form-control(name='description', cols='30', rows='7', placeholder='Description')
                       .form-group
                         input.btn.btn-primary.btn-md(type='submit', value='Send Message')
+        #get-in-touch
+          .fh5co-narrow-content
+            .row
+              .col-md-4.animate-box(data-animate-effect='fadeInLeft')
+                h1.fh5co-heading-colored Get in touch
+            .row
+              .col-md-6.col-md-offset-3.col-md-pull-3.animate-box(data-animate-effect='fadeInLeft')
+                p.fh5co-lead
+                  | If you want to get in touch with me, click the button underneath to go see my contact information.
+                p
+                  a.btn.btn-primary(href='/contact') Contact
+          
 
       // jQuery
       script(src='/js/jquery.min.js')

@@ -48,7 +48,7 @@ router.get('/project', function(req, res, next) {
 	},
 	{
 		id: "theater",
-		name: "Theater Project",
+		name: "Scalable Theater Bookings",
 		description: "A theater bookings system, where it allows owner to book movie and time for users. It displays statistics that may help the owner see what is the revenue and profit times.",
 		date: "April 2016",
 		tech: "VB, MS SQL, Visual Studio",
@@ -96,16 +96,8 @@ router.get('/project', function(req, res, next) {
 			{
 				name: 'icon-postgresql'
 			}
-		]
-	},
-	{
-		id: "cobol",
-		name: "Cobol Transactions Paper",
-		description: "A mainframe program that seperates each transaction records to specific webpages.",
-		date: "April 2017",
-		tech: "COBOL",
-		link: "https://github.com/amaraladil/Cobol-And-CICS",
-		image: ""
+		],
+		extraImage: ['bntWV3YdDx.gif']
 	},
 	{
 		id: "portfolio",
@@ -131,13 +123,13 @@ router.get('/project', function(req, res, next) {
 		]
 	},
 	{
-		id: "unity",
-		name: "Unity Project",
-		description: "Made 3D and 2D projects for school, just getting the feel around animating and designing levels through each projects.",
+		id: "zelda",
+		name: "Zelda Imitation Game",
+		description: "A 2D game project of a imitation of Zelda. As a school project, It gave an indepth feel around animating, designing levels and adding new components (Like Health bar, Pots, Heart Pickup).",
 		date: "March 2020",
 		tech: "C#, Unity",
 		link: "https://github.com/amaraladil/InteractiveProjects",
-		image: "",
+		image: "zelda.PNG",
 		code: [
 			{
 				name: 'icon-csharp'
@@ -148,7 +140,8 @@ router.get('/project', function(req, res, next) {
 			{
 				name: 'icon-visualstudio'
 			}
-		]
+		],
+		extraImage: ['yfhQAailpt.gif', 'JzMWRZ7m8V.gif']
 	},
 	{
 		id: "blackjack",
