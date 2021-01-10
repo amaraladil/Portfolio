@@ -1270,6 +1270,10 @@ i.modal-icon {
   font-size: 100px;
 }
 
+.main-text {
+  text-align: left !important;
+}
+
 /* .modal {
   z-index: 10;
 } */

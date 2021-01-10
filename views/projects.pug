@@ -64,10 +64,10 @@ block content
                                 i.modal-icon(class=code.name)
                     .modal-footer
                       if project.web
-                        a.btn(href=project.web, title='Live Demo')
+                        a.btn(href=project.web, title='Live Demo', target='_BLANK')
                           i.icon-monitor
                           | Live Demo
-                      a.btn(href=project.link, title='Source Code')
+                      a.btn(href=project.link, title='Source Code', target='_BLANK')
                         i.icon-eye-outline
                         | Source
             for project in projects

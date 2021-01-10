@@ -61,16 +61,17 @@ router.get('/project', function(req, res, next) {
 			{
 				name: 'icon-visualstudio'
 			}
-		]
+		],
+		extraImage: ['m1x03lZKkA.gif']
 	},
 	{
 		id: "realtor",
 		name: "Realtor Website",
-		description: "A web development class group project that is designed to handle online real estate for both buyer and seller. The system is able to edit the account and show all the available housing in the market, in the specified city locations or different variety of criterias. I was the project planner/lead, focused on the backend. The difficulty I had most on this was the search process for all the houses",
+		description: "The website got a recent overhaul on its design, it became more modernized and is now responsive to different screen sizes - compared to the old layout, which needed a new look. A web development class group project that is designed to handle online real estate for both buyer and seller. The system is able to edit the account and show all the available housing in the market, in the specified city locations or different variety of criterias. I was the project planner/lead, focused on the backend. As the Website needed a revision on its style after all these years, the website got an overhaul on it's design.",
 		date: "December 2016",
-		tech: "PHP, Postgre SQL",
+		tech: "PHP, jQuery, PostgreSQL",
 		link: "https://github.com/amaraladil/Realtor-Website",
-		image: "realtor.PNG",
+		image: "realtor-new.PNG",
 		web: 'https://realtorwebsite-project.herokuapp.com/',
 		code: [
 			{
@@ -79,7 +80,8 @@ router.get('/project', function(req, res, next) {
 			{
 				name: 'icon-postgresql'
 			}
-		]
+		],
+		extraImage: ['realtor.PNG']
 	},
 	{
 		id: "durak",
