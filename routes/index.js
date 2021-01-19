@@ -85,7 +85,7 @@ router.get('/project', function(req, res, next) {
 	},
 	{
 		id: "durak",
-		name: "Durak Game",
+		name: "Durak Cards",
 		description: "Used C# to design a russian card game, called Durak. You play against an AI player, each player take turns to up the previous card value. It has a full GUI design for the Player to be able to play the game. There is different choices for the Player, as the number of decks allowed in the game. As the game starts, it will choose which suit is highly valued. If clubs gets chosen, it has five more points added on top of its value. The window can show a statistic of the player's record, from how many wins to which number of cards was started.",
 		date: "April 2017",
 		tech: "C#, Visual Studio",
