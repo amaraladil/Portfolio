@@ -26,7 +26,7 @@ router.get('/about', function(req, res, next) {
   res.render('about', { title: "Amar's About Page", activeAbout: true });
 });
 
-router.get('/project', function(req, res, next) {
+router.get('/hidden-project', function(req, res, next) {
 	//JSON List of projects that'll loop through in webpage
 	var projects = [
 	{
@@ -37,14 +37,7 @@ router.get('/project', function(req, res, next) {
 		tech: "RubyOnRails",
 		link: "https://github.com/amaraladil/KWH_RubyOnRails",
 		image: "hotel.jpg",
-		code: [
-			{
-				name: 'icon-ruby'
-			},
-			{
-				name: 'icon-rails'
-			}
-		]
+		code: ['icon-ruby','icon-rails']
 	},
 	{
 		id: "theater",
@@ -54,14 +47,7 @@ router.get('/project', function(req, res, next) {
 		tech: "VB, MS SQL, Visual Studio",
 		link: "https://github.com/amaraladil/TheaterProject",
 		image: "theaterVB.PNG",
-		code: [
-			{
-				name: 'icon-dot-net'
-			},
-			{
-				name: 'icon-visualstudio'
-			}
-		],
+		code: ['icon-dot-net','icon-visualstudio'],
 		extraImage: ['m1x03lZKkA.gif']
 	},
 	{
@@ -73,14 +59,7 @@ router.get('/project', function(req, res, next) {
 		link: "https://github.com/amaraladil/Realtor-Website",
 		image: "realtor-new.PNG",
 		web: 'https://realtorwebsite-project.herokuapp.com/',
-		code: [
-			{
-				name: 'icon-php'
-			},
-			{
-				name: 'icon-postgresql'
-			}
-		],
+		code: ['icon-php','icon-postgresql'],
 		extraImage: ['realtor.PNG']
 	},
 	{
@@ -91,14 +70,7 @@ router.get('/project', function(req, res, next) {
 		tech: "C#, Visual Studio",
 		link: "https://github.com/amaraladil/DurakGame",
 		image: "Durak.PNG",
-		code: [
-			{
-				name: 'icon-csharp'
-			},
-			{
-				name: 'icon-postgresql'
-			}
-		],
+		code: ['icon-csharp', 'icon-postgresql'],
 		extraImage: ['bntWV3YdDx.gif']
 	},
 	{
@@ -109,20 +81,7 @@ router.get('/project', function(req, res, next) {
 		tech: "Node, MongoDB, Pug",
 		link: "https://github.com/amaraladil/Portfolio",
 		image: "PortfolioPage.PNG",
-		code: [
-			{
-				name: 'icon-javascript'
-			},
-			{
-				name: 'icon-node-dot-js'
-			},
-			{
-				name: 'icon-mongodb'
-			},
-			{
-				name: 'icon-bootstrap'
-			}
-		]
+		code: ['icon-javascript', 'icon-node-dot-js', 'icon-mongodb','icon-bootstrap']
 	},
 	{
 		id: "zelda",
@@ -132,17 +91,7 @@ router.get('/project', function(req, res, next) {
 		tech: "C#, Unity",
 		link: "https://github.com/amaraladil/InteractiveProjects",
 		image: "zelda.PNG",
-		code: [
-			{
-				name: 'icon-csharp'
-			},
-			{
-				name: 'icon-unity'
-			},
-			{
-				name: 'icon-visualstudio'
-			}
-		],
+		code: ['icon-csharp','icon-unity','icon-visualstudio'],
 		extraImage: ['yfhQAailpt.gif', 'JzMWRZ7m8V.gif']
 	},
 	{
@@ -153,11 +102,7 @@ router.get('/project', function(req, res, next) {
 		tech: "C++",
 		link: "https://github.com/amaraladil/Black-Jack-Game",
 		image: "blackjack.PNG",
-		code: [
-			{
-				name: 'icon-cplusplus'
-			}
-		],
+		code: ['icon-cplusplus'],
 		web: 'https://onlinegdb.com/H1nBmxiiP'
 	}
 	];
@@ -173,10 +118,16 @@ router.get('/newProject', function(req, res, next) {
     
     
     var newProjects = new Projects({
-        name: "Cobol Transactions Paper",
-		description: "A mainframe program that seperates each transaction records to specific webpages.",
-		date: "April 2017"
-    });
+        id: "blackjack",
+		name: "Black Jack Game",
+		description: "Terminal-based game, where the player can play a game of black jack with a dealer and up to four AI players. The player can choose to hit or stay during the round, giving them options - plus each round they can choose how many chips they can bet each time.",
+		date: "December 2018",
+		tech: "C++",
+		link: "https://github.com/amaraladil/Black-Jack-Game",
+		image: "blackjack.PNG",
+		code: ['icon-cplusplus'],
+		web: 'https://onlinegdb.com/H1nBmxiiP'
+	});
     
     newProjects.save(function (err, Projects) {
         if (err) return console.error(err);
@@ -186,7 +137,7 @@ router.get('/newProject', function(req, res, next) {
 });
 
 
-router.get('/current_projects', projects_controller.getProjects);
+router.get('/project', projects_controller.getProjects);
 
 router.post('/contact', contact_controller.sendTheMail);
 

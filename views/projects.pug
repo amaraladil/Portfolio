@@ -61,7 +61,7 @@ block content
                           if project.code
                             p= 'Technologies used:'
                               for code in project.code
-                                i.modal-icon(class=code.name)
+                                i.modal-icon(class=code)
                     .modal-footer
                       if project.web
                         a.btn(href=project.web, title='Live Demo', target='_BLANK')

@@ -11,9 +11,9 @@ var app = express();
 
 //Set up mongoose connection
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb+srv://amar:pass@amaraladil-portfolio.korlj.mongodb.net/test?retryWrites=true&w=majority';
+var mongoDB = 'mongodb+srv://dbUser:dbUser@cluster0.qruxl.mongodb.net/projects?retryWrites=true&w=majority';
 // connect to the database using the provided URI string.
-mongoose.connect(mongoDB);
+mongoose.connect(mongoDB, { useUnifiedTopology: true, useNewUrlParser: true });
 
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
