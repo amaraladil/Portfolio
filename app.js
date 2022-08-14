@@ -12,7 +12,7 @@ var app = express();
 
 //Set up mongoose connection
 var mongoose = require('mongoose');
-var mongoDB = process.env.locationDB;
+var mongoDB = process.env.DB_PROJECTS;
 // connect to the database using the provided URI string.
 mongoose.connect(mongoDB, { useUnifiedTopology: true, useNewUrlParser: true });
 

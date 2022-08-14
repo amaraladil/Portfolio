@@ -56,7 +56,8 @@ block content
                           //- a.work.image-popup(style='background-image: url(/images/'+ (project.image == '' ? 'img-1.jpg' : project.image ) + ');')
                         .col-md-6
                           h2.fh5co-heading= project.name
-                          p=project.description 
+                          - var changedString = project.description.replace(/\\n/g, '\n\n')
+                          p(style = 'white-space: pre-wrap')=changedString
                           p= 'Created in: ' + project.date
                           if project.code
                             p= 'Technologies used:'
